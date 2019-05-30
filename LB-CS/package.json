@@ -1,13 +1,14 @@
 {
-  "name": "lb-cs",
-  "version": "0.0.0",
+  "name": "LB-CS",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && npm audit"
   },
   "private": true,
   "dependencies": {
@@ -22,10 +23,20 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback-boot": "^2.6.5",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback": "^3.22.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
     "@angular/cli": "~7.3.9",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
@@ -44,5 +55,11 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "LB-CS"
   }
-}
